@@ -18,22 +18,29 @@ function verificar(){
                 img.setAttribute('src', 'image/criança homem.png')
             }else if (idade < 21) {
                 //jovem
+                img.setAttribute('src', 'image/Jovem homen.png')
             }else if (idade < 50){
                 //Adulto
+                img.setAttribute('src', 'image/Sem título.png')
             }else{
                 //Idoso
+                img.setAttribute('src', 'image/Idoso homem.png')
             }
                 
         } else if (fsex[1].checked) {
             genero = 'Mulher'
             if (idade >=0 && idade < 10){
                 //Criança
+                img.setAttribute('src', 'image/criança mulher.png')
             }else if (idade < 21) {
                 //jovem
+                img.setAttribute('src', 'image/Jovem mulher.png')
             }else if (idade < 50){
                 //Adulto
+                img.setAttribute('src', 'image/Adulta mulher.png')
             }else{
                 //Idoso
+                img.setAttribute('src', 'image/Idosa mulher.png')
             }
                 
         }
@@ -41,5 +48,6 @@ function verificar(){
         res.innerHTML = `Dectectamos ${genero} com ${idade} Anos`
         res.appendChild(img).style.height = '250px'
         res.appendChild(img).style.width = '250px'
+        res.appendChild(img).style.margin = '10px'
     }
 }
